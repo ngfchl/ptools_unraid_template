@@ -1,5 +1,7 @@
 # PTools
 
+## [English](./readme_en.md)
+
 > PTools 是一个多功能的 PT 站点自动化工具，支持站点签到、数据聚合、辅种、下载器管理等功能，旨在让 Pter 们更轻松的玩 PT
 
 > 网站：https://ptools.fun
