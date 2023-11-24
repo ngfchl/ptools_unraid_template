@@ -1,36 +1,62 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>ptools-backend</Name>
-  <Repository>newptools/ptools:latest</Repository>
-  <Registry/>
-  <Network>host</Network>
-  <MyIP/>
-  <Shell>bash</Shell>
-  <Privileged>false</Privileged>
-  <Support/>
-  <Project/>
-  <Overview/>
-  <Category/>
-  <WebUI>http://[IP]:[PORT:5173]</WebUI>
-  <TemplateURL/>
-  <Icon>https://img.ptools.fun/blog/209271688287909_.pic.jpg</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled>1690381666</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
-  <Requires/>
-  <Config Name=" &#x6388;&#x6743;&#x7801;" Target="TOKEN" Default="" Mode="" Description="&#x6388;&#x6743;&#x7801;&#xFF0C;&#x5FC5;&#x586B;" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="&#x90AE;&#x7BB1;" Target="DJANGO_SUPERUSER_EMAIL" Default="" Mode="" Description="&#x5FC5;&#x586B;&#xFF0C;&#x4E0E; token &#x4E00;&#x8D77;&#x9A8C;&#x8BC1;" Type="Variable" Display="always" Required="false" Mask="false"></Config>
-  <Config Name="&#x4EFB;&#x52A1;&#x67E5;&#x770B;&#x7AEF;&#x53E3;" Target="5566" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5566</Config>
-  <Config Name="&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x7AEF;&#x53E3;" Target="9001" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">9001</Config>
-  <Config Name="&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x6620;&#x5C04;" Target="/ptools/db" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/newptools/db</Config>
-  <Config Name="&#x65E5;&#x5FD7;&#x6587;&#x4EF6;" Target="/ptools/logs" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/newptools/logs</Config>
-  <Config Name="NGINX&#x7AEF;&#x53E3;" Target="WEBUI_PORT" Default="80" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">5173</Config>
-  <Config Name="DJANGO_WEB_PORT" Target="DJANGO_WEB_PORT" Default="8000" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">8001</Config>
-  <Config Name="&#x6D4B;&#x901F;&#x5F00;&#x5173;" Target="CloudFlareSpeedTest" Default="false" Mode="" Description="true&#xFF0C;false" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="&#x65E5;&#x5FD7;&#x7EA7;&#x522B;" Target="LOGGER_LEVEL" Default="DEBUG" Mode="" Description="DEBUG INFO" Type="Variable" Display="always" Required="false" Mask="false">DEBUG</Config>
-  <Config Name="Redis&#x7AEF;&#x53E3;" Target="REDIS_SERVER_PORT" Default="6379" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">16379</Config>
-  <Config Name="&#x81EA;&#x52A8;&#x66F4;&#x65B0;" Target="AUTO_UPDATE" Default="false" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+    <Name>ptools-backend</Name>
+    <Repository>newptools/ptools:latest</Repository>
+    <Registry>https://hub.docker.com/r/newptools/ptools/</Registry>
+    <Network>host</Network>
+    <MyIP/>
+    <Shell>bash</Shell>
+    <Privileged>false</Privileged>
+    <Support>https://ptools.fun/</Support>
+    <Project/>
+    <Overview>PTools, a tool that allows you to play PT easily, supports check-in, data statistics, downloader
+        aggregation management, brush stream, auxiliary seed and other functions, with web and App
+    </Overview>
+    <Category/>
+    <WebUI>http://[IP]:[PORT:5173]</WebUI>
+    <TemplateURL>https://github.com/ngfchl/ptools_unraid_template/raw/main/my-newptools.xml</TemplateURL>
+    <Icon>https://img.ptools.fun/blog/209271688287909_.pic.jpg</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <CPUset/>
+    <DateInstalled>1690381666</DateInstalled>
+    <DonateText/>
+    <DonateLink/>
+    <Requires/>
+    <Config Name=" &#x6388;&#x6743;&#x7801;" Target="TOKEN" Default="" Mode=""
+            Description="&#x6388;&#x6743;&#x7801;&#xFF0C;&#x5FC5;&#x586B;" Type="Variable" Display="always"
+            Required="false" Mask="false"/>
+    <Config Name="&#x90AE;&#x7BB1;" Target="DJANGO_SUPERUSER_EMAIL" Default="" Mode=""
+            Description="&#x5FC5;&#x586B;&#xFF0C;&#x4E0E; token &#x4E00;&#x8D77;&#x9A8C;&#x8BC1;" Type="Variable"
+            Display="always" Required="false" Mask="false"/>
+    <Config Name="&#x4EFB;&#x52A1;&#x67E5;&#x770B;&#x7AEF;&#x53E3;" Target="5566" Default="" Mode="tcp" Description=""
+            Type="Port" Display="always" Required="false" Mask="false">5566
+    </Config>
+    <Config Name="&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x7AEF;&#x53E3;" Target="9001" Default="" Mode="tcp" Description=""
+            Type="Port" Display="always" Required="false" Mask="false">9001
+    </Config>
+    <Config Name="&#x6570;&#x636E;&#x5E93;&#x6587;&#x4EF6;&#x6620;&#x5C04;" Target="/ptools/db" Default="" Mode="rw"
+            Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/newptools/db
+    </Config>
+    <Config Name="&#x65E5;&#x5FD7;&#x6587;&#x4EF6;" Target="/ptools/logs" Default="" Mode="rw" Description=""
+            Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/newptools/logs
+    </Config>
+    <Config Name="NGINX&#x7AEF;&#x53E3;" Target="WEBUI_PORT" Default="80" Mode="" Description="" Type="Variable"
+            Display="always" Required="false" Mask="false">5173
+    </Config>
+    <Config Name="DJANGO_WEB_PORT" Target="DJANGO_WEB_PORT" Default="8000" Mode="" Description="" Type="Variable"
+            Display="always" Required="false" Mask="false">8001
+    </Config>
+    <Config Name="&#x6D4B;&#x901F;&#x5F00;&#x5173;" Target="CloudFlareSpeedTest" Default="false" Mode=""
+            Description="true&#xFF0C;false" Type="Variable" Display="always" Required="false" Mask="false">true
+    </Config>
+    <Config Name="&#x65E5;&#x5FD7;&#x7EA7;&#x522B;" Target="LOGGER_LEVEL" Default="DEBUG" Mode=""
+            Description="DEBUG INFO" Type="Variable" Display="always" Required="false" Mask="false">DEBUG
+    </Config>
+    <Config Name="Redis&#x7AEF;&#x53E3;" Target="REDIS_SERVER_PORT" Default="6379" Mode="" Description=""
+            Type="Variable" Display="always" Required="false" Mask="false">16379
+    </Config>
+    <Config Name="&#x81EA;&#x52A8;&#x66F4;&#x65B0;" Target="AUTO_UPDATE" Default="true" Mode="" Description=""
+            Type="Variable" Display="always" Required="false" Mask="false">true
+    </Config>
 </Container>
